@@ -1,0 +1,305 @@
+/* =========================================================
+   MODERN DARK NAVY UI (FINAL CLEAN VERSION)
+========================================================= */
+
+/* GLOBAL FONT */
+html, body, [class*="css"] {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* APP BACKGROUND */
+.stApp {
+    background: linear-gradient(
+        135deg,
+        #020617,
+        #0f172a,
+        #111827,
+        #1e293b
+    );
+    color: #f8fafc;
+}
+
+/* =========================================================
+   MAIN TITLE (NO TOP GAP)
+========================================================= */
+.main-title {
+
+    font-size: 42px;
+    font-weight: 800;
+    text-align: center;
+
+    margin-top: 50px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #60a5fa,
+        #38bdf8,
+        #818cf8
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    letter-spacing: 1px;
+
+    text-shadow: 0 0 25px rgba(96,165,250,0.25);
+}
+
+/* SUBTITLE (NO GAP) */
+.sub-title {
+
+    text-align: center;
+    font-size: 17px;
+    color: #cbd5e1;
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    padding: 0px;
+    line-height: 1.2;
+}
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+[data-testid="stSidebar"] {
+    background: rgba(15, 23, 42, 0.95);
+    border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+[data-testid="stSidebar"] * {
+    color: #f8fafc;
+}
+
+/* =========================================================
+   GLASS CARD
+========================================================= */
+.glass-card {
+
+    background: linear-gradient(
+        145deg,
+        rgba(15,23,42,0.92),
+        rgba(30,41,59,0.92)
+    );
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(16px);
+
+    padding: 12px;
+
+    border-radius: 24px;
+
+    margin-top: 5px;
+
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+
+    transition: 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-4px);
+    border: 1px solid rgba(96,165,250,0.5);
+    box-shadow: 0 12px 40px rgba(59,130,246,0.25);
+}
+
+/* =========================================================
+   FLIGHT CARD
+========================================================= */
+.flight-card {
+
+    background: linear-gradient(
+        145deg,
+        rgba(30,41,59,0.95),
+        rgba(15,23,42,0.95)
+    );
+
+    border-radius: 18px;
+
+    padding: 18px;
+
+    margin-top: 10px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.flight-card h3 {
+    color: #93c5fd;
+    font-size: 28px;
+}
+
+.flight-card h4 {
+    color: #e2e8f0;
+}
+
+.flight-card p {
+    color: #f8fafc;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   HOTEL CARD
+========================================================= */
+.hotel-card {
+
+    background: linear-gradient(
+        145deg,
+        rgba(30,41,59,0.95),
+        rgba(15,23,42,0.95)
+    );
+
+    border-radius: 18px;
+
+    padding: 18px;
+
+    margin-top: 10px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.hotel-card h3 {
+    color: #f9a8d4;
+    font-size: 24px;
+}
+
+.hotel-card p {
+    color: #f8fafc;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   WEATHER BOX (IMPROVED)
+========================================================= */
+.weather-box {
+
+    background: linear-gradient(
+        145deg,
+        rgba(30,41,59,0.95),
+        rgba(15,23,42,0.95)
+    );
+
+    border-radius: 24px;
+
+    padding: 12px;
+
+    text-align: center;
+
+    border: 1px solid rgba(96,165,250,0.2);
+
+    backdrop-filter: blur(16px);
+
+    box-shadow: 0 4px 32px rgba(0,0,0,0.35);
+
+    transition: 0.3s ease;
+}
+
+.weather-box:hover {
+    transform: scale(1.05);
+    border: 1px solid rgba(59,130,246,0.45);
+}
+
+/* WEATHER TEXT */
+.weather-box h2 {
+    font-size: 16px;
+    color: #f8fafc;
+}
+
+.weather-box h1 {
+    font-size: 32px;
+    color: #38bdf8;
+    font-weight: 800;
+}
+
+.weather-box p {
+    font-size: 12px;
+    color: #e2e8f0;
+}
+
+/* =========================================================
+   CHAT UI
+========================================================= */
+.stChatInputContainer {
+    background: rgba(15,23,42,0.95);
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* USER / ASSISTANT ICONS */
+[data-testid="chatAvatarIcon-user"] {
+    background-color: #2563eb;
+}
+
+[data-testid="chatAvatarIcon-assistant"] {
+    background-color: #7c3aed;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+.stButton>button {
+
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    color: white;
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 12px 24px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.stButton>button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(37,99,235,0.4);
+}
+
+/* =========================================================
+   INPUTS
+========================================================= */
+.stSelectbox div[data-baseweb="select"],
+.stDateInput,
+.stSlider,
+.stRadio {
+    background-color: rgba(255,255,255,0.03);
+    border-radius: 12px;
+}
+
+/* =========================================================
+   REMOVE STREAMLIT TOP SPACE
+========================================================= */
+.block-container {
+    padding-top: 0rem;
+    padding-bottom: 1rem;
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
