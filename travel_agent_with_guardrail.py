@@ -16,7 +16,6 @@ from agents import function_tool
 from typing import Optional
 from typing import List
 
-from pycparser.ply.yacc import resultlimit
 from pydantic import BaseModel
 from pydantic import Field
 
@@ -30,6 +29,14 @@ from agents import output_guardrail
 from agents import RunContextWrapper
 
 from dataclasses import dataclass
+
+#log fire is used to enable tracing which is essential for debugging
+import logfire
+
+#connects app to logfire
+logfire.configure()
+#track agent activities
+logfire.instrument_openai_agents()
 
 #API to access LLM
 load_dotenv()
@@ -437,10 +444,14 @@ async def main():
         print("Other Error")
         print(e)
 
-set_tracing_disabled(True)
+#set_tracing_disabled(True)
+#For logfire working
+set_tracing_disabled(False)
 
 if __name__ == "__main__":
     asyncio.run(main())
+
+
 
 
 
