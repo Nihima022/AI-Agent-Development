@@ -130,15 +130,7 @@ for role,content in st.session_state.messages:
 prompt=st.chat_input("Ask your travel assistant anything...")
 
 #Bridge between UI and Agent
-async def run_agent(query,flight,budget,date,trip_type):
-    f"""
-        User request: {query}
-        Preferences:
-        - Flight: {flight}
-        - Budget: {budget}
-        - Date: {date}
-        - Trip type: {trip_type}
-    """
+async def run_agent(query):
     result= await Runner.run(travel_agent,query)
     return result.final_output
 
@@ -153,7 +145,7 @@ if prompt:
     with st.chat_message("assistant"):
         with st.spinner("✈️ Planning your perfect journey..."):
             try:
-                response = asyncio.run(run_agent(prompt,flight_option,budget_slider,date_option,trip_type))
+                response = asyncio.run(run_agent(prompt))
                 if hasattr(response, "airline"):
                     flight_html = f"""
                     <div class="glass-card">
